@@ -1,7 +1,6 @@
 from core import download_manager as dm
 
-def main():
-    ydl_opts = {
+ydl_opts = {
         'outtmpl': '%(title)s.%(ext)s',     # Шаблоны названия для вывода
         'noplaylist': True,         # Без плейлиста
 
@@ -16,8 +15,11 @@ def main():
         'geo_pass' : True,
         'verbose' : True,
     }
-    downloader = dm.VideoDownloader(ydl_opts)
-    downloader.download('https://www.youtube.com/watch?v=bFjxL1rwwoE')
+downloader = dm.VideoDownloader(ydl_opts)
+
+
+def main():
+ pass
 
 if __name__ == "__main__":
     main()
